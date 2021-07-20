@@ -1,0 +1,298 @@
+@charset "UTF-8";
+/*NOTAS:
+-¿POR QUE NO SE VE EL TEXTO EN LAS NOTICIAS PRINCIPALES CUANDO ESTA PARA TELEFONOS?
+-MODIFICAR O QUITAR EL GAP ENTRE EL ARTICULO Y LA FOTO
+-CAMBIAR EL COLOR DEL BORDER DE LAS NOTICIAS
+-EL MARGIN DEBE SER EL MISMO EN LAS FOTOS DE LA SECCION DE NOTICIAS (INDEX, CELULARES)
+-MODIFICAR EL ALTO DE CARROUSEL PARA QUE SE MODIFIQUE AL HACER RESPONSIVE
+-ACOMODAR IMAGENES DEL INDEX
+*/
+/*LAYOUT*/
+/*FUENTES*/
+/*COLORES*/
+/*GENERAL*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.header {
+  grid-area: header;
+  display: grid !important; }
+
+.header__logo {
+  justify-self: center;
+  align-self: center; }
+
+.header__img {
+  width: 100px; }
+
+.navbar {
+  grid-area: nav;
+  font-family: "Noto Sans", sans-serif; }
+
+.footer {
+  margin-top: 10px;
+  grid-area: footer;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.footer__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
+/*index*/
+.paginaPrincipal {
+  display: grid;
+  grid-template-areas: "header header header" "nav nav nav" "section section section" "footer footer footer";
+  grid-template-rows: auto auto auto 120px;
+  grid-template-columns: 120px auto auto; }
+
+.paginaPrincipal__section {
+  grid-area: section; }
+
+.carousel {
+  margin: 20px 20px 10px 20px; }
+
+.carousel-indicators li {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 100%;
+  margin-right: 10px !important;
+  margin-left: 10px !important; }
+
+.ultimasNoticias-paginaPrincipal {
+  display: grid;
+  grid-template-rows: repeat(5, auto); }
+
+.ultimasNoticias-paginaPrincipal__container {
+  margin-top: 10px;
+  padding: 15px 10px 5px 10px;
+  border-top: 2px solid #E8E8E8;
+  display: grid;
+  grid-template-columns: 60% 30%;
+  grid-column-gap: 10%; }
+
+.ultimasNoticias-paginaPrincipal__img {
+  width: 100%; }
+
+/*celulares*/
+.paginaCelulares {
+  display: grid;
+  grid-template-areas: "header header header" "nav nav nav" "section section section" "footer footer footer";
+  grid-template-rows: auto auto auto 120px;
+  grid-template-columns: 120px auto auto; }
+
+.paginaCelulares__section {
+  grid-area: section; }
+
+.ultimasNoticias-paginaCelulares {
+  display: grid;
+  grid-template-rows: repeat(5, auto); }
+
+.ultimasNoticias-paginaCelulares__container {
+  margin-top: 10px;
+  padding: 15px 10px 5px 10px;
+  border-top: 2px solid #E8E8E8;
+  display: grid;
+  grid-template-columns: 60% 30%;
+  grid-column-gap: 10%; }
+
+.ultimasNoticias-paginaCelulares__img {
+  width: 100%; }
+
+/*otras noticias*/
+.paginaOtros {
+  display: grid;
+  grid-template-areas: "header header header" "nav nav nav" "section section section" "footer footer footer";
+  grid-template-rows: auto auto auto 120px;
+  grid-template-columns: 120px auto auto; }
+
+.paginaOtros__section {
+  grid-area: section; }
+
+.ultimasNoticias-paginaOtros {
+  display: grid;
+  grid-template-rows: repeat(5, auto); }
+
+.ultimasNoticias-paginaOtros__container {
+  margin-top: 10px;
+  padding: 15px 10px 5px 10px;
+  border-top: 2px solid #E8E8E8;
+  display: grid;
+  grid-template-columns: 60% 30%;
+  grid-column-gap: 10%; }
+
+.ultimasNoticias-paginaOtros__img {
+  width: 100%; }
+
+/*
+font-family: 'Noto Sans', sans-serif;
+font-weight: 400 400italic 700 700italic;
+font-family: 'PT Serif', serif;
+font-weight: 400 400italic 700 700italic;
+*/
+/*GENERAL*/
+.footer {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-size: 12px; }
+
+.footer__derechos {
+  text-align: center;
+  font-style: italic; }
+
+/*index*/
+.ultimasNoticias-paginaPrincipal__title {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.4em;
+  margin: 10px 0 10px 0; }
+
+.ultimasNoticias-paginaPrincipal__title-notice {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.2; }
+
+/*celulares*/
+.ultimasNoticias-paginaCelulares__title {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.4em;
+  margin: 10px 0 10px 0; }
+
+.ultimasNoticias-paginaCelulares__title-notice {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.2; }
+
+/*otras noticias*/
+.ultimasNoticias-paginaOtros__title {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.4em;
+  margin: 10px 0 10px 0; }
+
+.ultimasNoticias-paginaOtros__title-notice {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.2; }
+
+/*GENERAL*/
+.bg-color {
+  background-color: #000; }
+
+.navbar-brand {
+  color: #000; }
+
+.nav-link:hover {
+  background-color: #3B3B3B; }
+
+.footer {
+  background-color: #000;
+  color: #fff; }
+
+@media all and (min-width: 768px) {
+  /*index*/
+  .ultimasNoticias-paginaPrincipal__title {
+    font-size: 1.8em; }
+  .ultimasNoticias-paginaPrincipal__container {
+    margin: 10px 10vw 0 10vw;
+    padding: 15px 20px 5px 20px; }
+  .ultimasNoticias-paginaPrincipal__title-notice {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    line-height: 1.4;
+    word-spacing: 2px; }
+  /*celulares*/
+  .ultimasNoticias-paginaCelulares__title {
+    font-size: 1.8em; }
+  .ultimasNoticias-paginaCelulares__container {
+    margin: 10px 10vw 0 10vw;
+    padding: 15px 20px 5px 20px; }
+  .ultimasNoticias-paginaCelulares__title-notice {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    line-height: 1.4;
+    word-spacing: 2px; }
+  /*otros dispositivos*/
+  .ultimasNoticias-paginaOtros__title {
+    font-size: 1.8em; }
+  .ultimasNoticias-paginaOtros__container {
+    margin: 10px 10vw 0 10vw;
+    padding: 15px 20px 5px 20px; }
+  .ultimasNoticias-paginaOtros__title-notice {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    line-height: 1.4;
+    word-spacing: 2px; } }
+
+@media all and (min-width: 1024px) {
+  /*index*/
+  .paginaPrincipal {
+    grid-template-areas: "header header header" "nav nav nav" ". section ." "footer footer footer";
+    grid-template-columns: auto 70em auto; }
+  .carousel {
+    margin: 40px 0 40px 0; }
+  .carousel-item img {
+    height: 75vh; }
+  .carousel-title__principal {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 3.2em; }
+  .carousel-title__secundary {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.2em; }
+  .ultimasNoticias-paginaPrincipal {
+    grid-template-rows: repeat(5, auto); }
+  .ultimasNoticias-paginaPrincipal__container {
+    margin: 10px 7vw 0 7vw;
+    padding: 30px 20px 20px 20px; }
+  .ultimasNoticias-paginaPrincipal__title {
+    margin-bottom: 40px;
+    font-size: 3em; }
+  .ultimasNoticias-paginaPrincipal__title-notice {
+    font-size: 1.3em; }
+  /*celulares*/
+  .paginaCelulares {
+    grid-template-areas: "header header header" "nav nav nav" ". section ." "footer footer footer";
+    grid-template-columns: auto 70em auto; }
+  .ultimasNoticias-paginaCelulares {
+    grid-template-rows: repeat(5, auto); }
+  .paginaCelulares__section {
+    margin-top: 20px; }
+  .ultimasNoticias-paginaCelulares__container {
+    margin: 10px 7vw 0 7vw;
+    padding: 30px 20px 20px 20px; }
+  .ultimasNoticias-paginaCelulares__title {
+    margin-bottom: 40px;
+    font-size: 3em; }
+  .ultimasNoticias-paginaCelulares__title-notice {
+    font-size: 1.3em; }
+  /*otras noticias*/
+  .paginaOtros {
+    grid-template-areas: "header header header" "nav nav nav" ". section ." "footer footer footer";
+    grid-template-columns: auto 70em auto; }
+  .ultimasNoticias-paginaOtros {
+    grid-template-rows: repeat(5, auto); }
+  .paginaOtros__section {
+    margin-top: 20px; }
+  .ultimasNoticias-paginaOtros__container {
+    margin: 10px 7vw 0 7vw;
+    padding: 30px 20px 20px 20px; }
+  .ultimasNoticias-paginaOtros__title {
+    margin-bottom: 40px;
+    font-size: 3em; }
+  .ultimasNoticias-paginaOtros__title-notice {
+    font-size: 1.3em; } }

@@ -1,0 +1,14 @@
+/*GENERAL*/
+.bg-color{
+	background-color: $bgmenu;
+}
+.navbar-brand{
+	color: $menucolor;
+}
+.nav-link:hover{
+	background-color: $bgmenuhover;
+}
+.footer{
+	background-color: $bgfooter;
+	color: $fuentefooter-color;
+}

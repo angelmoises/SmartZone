@@ -1,0 +1,52 @@
+@mixin fuenteTitulos{
+	font-family: $fuenteTitulos;
+	font-weight: 400;
+	line-height: 1.2;
+}
+@mixin fuenteTitulosSecundarios{
+	font-family: $fuenteTitulos;
+	font-weight: 400;
+	font-style: italic;
+}
+@mixin fuenteTitulosUltimasNoticias{
+	font-family: $fuenteTitulosUltimasNoticias;
+	font-weight: 700;
+	font-style: italic;
+	text-align: center;
+	font-size: 1.4em;
+	margin: 10px 0 10px 0;
+}
+@mixin layout{
+	display: grid;
+	grid-template-areas:
+	"header header header"
+	"nav nav nav"
+	"section section section"
+	"footer footer footer";
+	grid-template-rows: auto auto auto 120px; 
+	grid-template-columns: 120px auto auto;
+}
+@mixin layoutDispositivosGrandes{
+	grid-template-areas: 
+	"header header header"
+	"nav nav nav"
+	". section ."
+	"footer footer footer";
+	grid-template-columns: auto 70em auto;
+}
+@mixin containerNoticias{
+	margin-top: 10px;
+	padding: 15px 10px 5px 10px;
+	border-top: $separadoresnoticias;
+	display: grid;
+	grid-template-columns: 60% 30%;
+	grid-column-gap: 10%;
+}
+@mixin containerNoticiasDispositivosMedianos{
+	margin: 10px 10vw 0 10vw;
+	padding: 15px 20px 5px 20px;
+}
+@mixin containerNoticiasDispositivosGrandes{
+	margin: 10px 7vw 0 7vw;
+	padding: 30px 20px 20px 20px;
+}

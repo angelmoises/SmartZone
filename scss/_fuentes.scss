@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*
+font-family: 'Noto Sans', sans-serif;
+font-weight: 400 400italic 700 700italic;
+font-family: 'PT Serif', serif;
+font-weight: 400 400italic 700 700italic;
+*/
+
+/*GENERAL*/
+.footer{
+	font-family: $fuenteFooter;
+	font-weight: 400;
+	font-size: 12px;
+}
+.footer__derechos{
+	text-align: center;
+	font-style: italic;
+}
+
+/*index*/
+.ultimasNoticias-paginaPrincipal__title{
+	@include fuenteTitulosUltimasNoticias;
+}
+.ultimasNoticias-paginaPrincipal__title-notice{
+	@include fuenteTitulos;
+}
+
+/*celulares*/
+.ultimasNoticias-paginaCelulares__title{
+	@include fuenteTitulosUltimasNoticias;
+}
+
+.ultimasNoticias-paginaCelulares__title-notice{
+	@include fuenteTitulos;
+}
+
+/*otras noticias*/
+.ultimasNoticias-paginaOtros__title{
+	@include fuenteTitulosUltimasNoticias;
+}
+
+.ultimasNoticias-paginaOtros__title-notice{
+	@include fuenteTitulos;
+}
