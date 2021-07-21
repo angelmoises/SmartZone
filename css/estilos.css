@@ -27,6 +27,9 @@
   grid-area: nav;
   font-family: "Noto Sans", sans-serif; }
 
+.nav-item {
+  margin: 0 8px 0 8px; }
+
 .footer {
   margin-top: 10px;
   grid-area: footer;
@@ -187,11 +190,9 @@ font-weight: 400 400italic 700 700italic;
 .bg-color {
   background-color: #000; }
 
-.navbar-brand {
-  color: #000; }
-
 .nav-link:hover {
-  background-color: #3B3B3B; }
+  background-color: #3B3B3B;
+  border-radius: 10px; }
 
 .footer {
   background-color: #000;

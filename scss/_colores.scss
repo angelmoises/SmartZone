@@ -2,11 +2,9 @@
 .bg-color{
 	background-color: $bgmenu;
 }
-.navbar-brand{
-	color: $menucolor;
-}
 .nav-link:hover{
 	background-color: $bgmenuhover;
+	border-radius: 10px;
 }
 .footer{
 	background-color: $bgfooter;
