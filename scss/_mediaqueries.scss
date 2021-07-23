@@ -24,19 +24,6 @@
 		line-height: 1.4;
 		word-spacing: 2px;
 	}
-
-	/*otros dispositivos*/
-	.ultimasNoticias-paginaOtros__title{
-		font-size: 1.8em;
-	}
-	.ultimasNoticias-paginaOtros__container{
-		@include containerNoticiasDispositivosMedianos;
-	}
-	.ultimasNoticias-paginaOtros__title-notice{
-		@include fuenteTitulos;
-		line-height: 1.4;
-		word-spacing: 2px;
-	}
 }
 
 @media all and (min-width: 1024px){
@@ -90,27 +77,6 @@
 		font-size: 3em;
 	}
 	.ultimasNoticias-paginaCelulares__title-notice{
-		font-size: 1.3em;
-	}
-
-	/*otras noticias*/
-	.paginaOtros{
-		@include layoutDispositivosGrandes;
-	}
-	.ultimasNoticias-paginaOtros{
-		grid-template-rows: $layoutNoticias;
-	}
-	.paginaOtros__section{
-		margin-top: 20px;
-	}
-	.ultimasNoticias-paginaOtros__container{
-		@include containerNoticiasDispositivosGrandes;
-	}
-	.ultimasNoticias-paginaOtros__title{
-		margin-bottom: 40px;
-		font-size: 3em;
-	}
-	.ultimasNoticias-paginaOtros__title-notice{
 		font-size: 1.3em;
 	}
 }

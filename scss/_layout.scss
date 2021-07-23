@@ -76,21 +76,3 @@
 .ultimasNoticias-paginaCelulares__img{
 	width: 100%;
 }
-
-/*otras noticias*/
-.paginaOtros{
-	@include layout;
-}
-.paginaOtros__section{
-	grid-area: section;
-}
-.ultimasNoticias-paginaOtros{
-	display: grid;
-	grid-template-rows: $layoutNoticias;
-}
-.ultimasNoticias-paginaOtros__container{
-	@include containerNoticias;
-}
-.ultimasNoticias-paginaOtros__img{
-	width: 100%;
-}

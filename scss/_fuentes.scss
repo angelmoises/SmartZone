@@ -34,12 +34,3 @@ font-weight: 400 400italic 700 700italic;
 .ultimasNoticias-paginaCelulares__title-notice{
 	@include fuenteTitulos;
 }
-
-/*otras noticias*/
-.ultimasNoticias-paginaOtros__title{
-	@include fuenteTitulosUltimasNoticias;
-}
-
-.ultimasNoticias-paginaOtros__title-notice{
-	@include fuenteTitulos;
-}
