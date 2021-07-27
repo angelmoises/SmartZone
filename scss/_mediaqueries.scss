@@ -1,8 +1,37 @@
 @media all and (min-width: 768px){
+	/*general*/
+	footer{
+		display: flex !important;
+		flex-direction: row;
+		justify-content: space-around;
+		font-size: 18px;
+		min-height: 200px;
+		div.acercaDe{
+			text-align: justify;
+		}
+		div.iconos{
+			flex-direction: column !important;
+		}
+	}
+
 	/*index*/
+	.carousel{
+		h1{
+			@include fuenteTitulos;
+			font-size: 2.2em;
+			-webkit-text-fill-color: #fff;
+			-webkit-text-stroke: 1px #000;
+		}
+		h2{
+			@include fuenteTitulosSecundarios;
+			font-size: 1.3em;
+			-webkit-text-fill-color: #fff;
+			-webkit-text-stroke: 0.3px #000;
+		}
+	}
 	.ultimasNoticias{
-		span{
-			font-size: 1.8em;
+		span.tituloSecciones{
+			font-size: 2.2em;
 		}
 		article{
 			@include containerNoticiasDispositivosMedianos;
@@ -12,7 +41,7 @@
 				word-spacing: 2px;
 			}
 		}
-	}
+	}	
 
 	/*celulares*/
 	.ultimasNoticias{
@@ -46,16 +75,14 @@
 		grid-template-columns: auto 70em auto;
 		section{
 			div.carousel{
-				margin: 40px 0 40px 0;
+				margin: 40px 0 15px 0;
 				div div.carousel-item{
 					height: 75vh;
 					div{
 						h1{
-							@include fuenteTitulos;
 							font-size: 3.2em;
 						}
-						h2{
-							@include fuenteTitulosSecundarios;
+						h2{							
 							font-size: 1.2em;
 						}
 					}

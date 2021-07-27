@@ -11,10 +11,9 @@ font-weight: 400 400italic 700 700italic;
 footer{
 	font-family: $fuenteFooter;
 	font-weight: 400;
-	font-size: 12px;
-	span{
+	font-size: 14px;
+	span.acercaDe{
 		text-align: center;
-		font-style: italic;
 	}
 }
 

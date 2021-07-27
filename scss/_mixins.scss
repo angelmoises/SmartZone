@@ -23,7 +23,7 @@
 	"nav nav nav"
 	"section section section"
 	"footer footer footer";
-	grid-template-rows: auto auto auto 120px; 
+	grid-template-rows: auto auto auto auto; 
 	grid-template-columns: 120px auto auto;
 }
 @mixin layoutPaginaCelulares{
@@ -33,7 +33,7 @@
 	"nav nav nav"
 	"section section section"
 	"footer footer footer";
-	grid-template-rows: auto auto auto 120px; 
+	grid-template-rows: auto auto auto auto; 
 	grid-template-columns: 120px auto auto;
 }
 @mixin containerNoticias{

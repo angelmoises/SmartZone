@@ -1,10 +1,9 @@
 /*GENERAL*/
 header{
-	/* background: linear-gradient(to top, #5E6A8C, #000) */
+	background-color: $header;
 }
 .navbar-bgcolor{
-	/* background: linear-gradient(to bottom, #5E6A8C, #000) */
-	background-color: $bgmenu;
+	background: $bgmenu;
 }
 .nav-link:hover{
 	background-color: $bgmenuhover;

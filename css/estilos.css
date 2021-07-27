@@ -29,21 +29,23 @@ nav {
 
 footer {
   margin-top: 10px;
-  grid-area: footer;
-  display: flex !important;
-  flex-direction: column;
-  justify-content: space-around; }
+  grid-area: footer; }
   footer div {
-    display: flex;
+    display: flex; }
+  footer div.acercaDe {
+    flex-direction: column;
+    min-height: 130px;
+    justify-content: space-around; }
+  footer div.iconos {
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly; }
+    justify-content: space-around;
+    margin: 10px 50px 10px 50px; }
 
 /*index*/
 .paginaPrincipal {
   display: grid;
   grid-template-areas: "header header header" "nav nav nav" "section section section" "footer footer footer";
-  grid-template-rows: auto auto auto 120px;
+  grid-template-rows: auto auto auto auto;
   grid-template-columns: 120px auto auto; }
   .paginaPrincipal section {
     grid-area: section; }
@@ -72,7 +74,7 @@ footer {
 .paginaCelulares {
   display: grid;
   grid-template-areas: "header header header" "nav nav nav" "section section section" "footer footer footer";
-  grid-template-rows: auto auto auto 120px;
+  grid-template-rows: auto auto auto auto;
   grid-template-columns: 120px auto auto; }
   .paginaCelulares section {
     grid-area: section; }
@@ -99,10 +101,9 @@ font-weight: 400 400italic 700 700italic;
 footer {
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
-  font-size: 12px; }
-  footer span {
-    text-align: center;
-    font-style: italic; }
+  font-size: 14px; }
+  footer span.acercaDe {
+    text-align: center; }
 
 /*index*/
 span.tituloSecciones {
@@ -134,11 +135,10 @@ span.tituloSecciones {
 
 /*GENERAL*/
 header {
-  /* background: linear-gradient(to top, #5E6A8C, #000) */ }
+  background-color: #5E6A8C; }
 
 .navbar-bgcolor {
-  /* background: linear-gradient(to bottom, #5E6A8C, #000) */
-  background-color: #5E6A8C; }
+  background: linear-gradient(to bottom, #5E6A8C, #000); }
 
 .nav-link:hover {
   background-color: #9392A6;
@@ -149,9 +149,34 @@ footer {
   color: #fff; }
 
 @media all and (min-width: 768px) {
+  /*general*/
+  footer {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 18px;
+    min-height: 200px; }
+    footer div.acercaDe {
+      text-align: justify; }
+    footer div.iconos {
+      flex-direction: column !important; }
   /*index*/
-  .ultimasNoticias span {
-    font-size: 1.8em; }
+  .carousel h1 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    font-size: 2.2em;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1px #000; }
+  .carousel h2 {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.3em;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 0.3px #000; }
+  .ultimasNoticias span.tituloSecciones {
+    font-size: 2.2em; }
   .ultimasNoticias article {
     margin: 10px 10vw 0 10vw;
     padding: 15px 20px 5px 20px; }
@@ -183,18 +208,12 @@ footer {
     grid-template-areas: "header header header" "nav nav nav" ". section ." "footer footer footer";
     grid-template-columns: auto 70em auto; }
     .paginaPrincipal section div.carousel {
-      margin: 40px 0 40px 0; }
+      margin: 40px 0 15px 0; }
       .paginaPrincipal section div.carousel div div.carousel-item {
         height: 75vh; }
         .paginaPrincipal section div.carousel div div.carousel-item div h1 {
-          font-family: "Noto Sans", sans-serif;
-          font-weight: 400;
-          line-height: 1.2;
           font-size: 3.2em; }
         .paginaPrincipal section div.carousel div div.carousel-item div h2 {
-          font-family: "Noto Sans", sans-serif;
-          font-weight: 400;
-          font-style: italic;
           font-size: 1.2em; }
     .paginaPrincipal section div.ultimasNoticias {
       grid-template-rows: repeat(5, auto); }

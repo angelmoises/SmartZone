@@ -20,14 +20,18 @@ nav{
 footer{
 	margin-top: 10px;
 	grid-area: footer;
-	display: flex !important;
-	flex-direction: column;
-	justify-content: space-around;
 	div{
 		display: flex;
+	}
+	div.acercaDe{
+		flex-direction: column;
+		min-height: 130px;
+		justify-content: space-around;
+	}
+	div.iconos{
 		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-evenly;
+		justify-content: space-around;
+		margin: 10px 50px 10px 50px;
 	}
 }
 
