@@ -1,78 +1,78 @@
 /*GENERAL*/
-.header{
+header{
 	grid-area: header;
 	display: grid !important;
+	div{
+		justify-self: center;
+		align-self: center;
+		img{
+			width: 250px;
+		}
+	}
 }
-.header__logo{
-	justify-self: center;
-	align-self: center;
-}
-.header__img{
-	width: 100px;
-}
-.navbar{
+nav{
 	grid-area: nav;
 	font-family: $fuenteMenu;
+	div ul li{
+		margin: 0 8px 0 8px;
+	}
 }
-.nav-item{
-	margin: 0 8px 0 8px;
-}
-.footer{
+footer{
 	margin-top: 10px;
 	grid-area: footer;
 	display: flex !important;
 	flex-direction: column;
 	justify-content: space-around;
-}
-.footer__content{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly;
+	div{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
 }
 
 /*index*/
 .paginaPrincipal{
-	@include layout;
-}
-.paginaPrincipal__section{
-	grid-area: section;
-}
-.carousel{
-	margin: 20px 20px 10px 20px;
-}
-.carousel-indicators li{
-	width: 10px !important;
-	height: 10px !important;
-	border-radius: 100%;
-	margin-right: 10px !important;
-	margin-left: 10px !important;
-}
-.ultimasNoticias-paginaPrincipal{
-	display: grid;
-	grid-template-rows: $layoutNoticias;
-}
-.ultimasNoticias-paginaPrincipal__container{
-	@include containerNoticias;
-}
-.ultimasNoticias-paginaPrincipal__img{
-	width: 100%;
+	@include layoutPaginaPrincipal;
+	section{
+		grid-area: section;
+		div.carousel{
+			margin: 20px 20px 10px 20px;
+			ol li{
+				width: 10px !important;
+				height: 10px !important;
+				border-radius: 100%;
+				margin-right: 10px !important;
+				margin-left: 10px !important;
+			}
+		}
+		div.ultimasNoticias{
+			display: grid;
+			grid-template-rows: $layoutNoticias;
+			article{
+				@include containerNoticias;
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
 }
 
 /*celulares*/
 .paginaCelulares{
-	@include layout;
-}
-.paginaCelulares__section{
-	grid-area: section;
-}
-.ultimasNoticias-paginaCelulares{
-	display: grid;
-	grid-template-rows: $layoutNoticias;
-}
-.ultimasNoticias-paginaCelulares__container{
-	@include containerNoticias;
-}
-.ultimasNoticias-paginaCelulares__img{
-	width: 100%;
+	@include layoutPaginaCelulares;
+	section{
+		grid-area: section;
+		div.ultimasNoticias{
+			display: grid;
+			grid-template-rows: $layoutNoticias;
+			article{
+				@include containerNoticias;
+				img{
+					width: 100%;
+				}
+			}
+		}
+	}
 }

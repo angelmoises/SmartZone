@@ -12,36 +12,32 @@
 /*COLORES*/
 /*GENERAL*/
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-.header {
+header {
   grid-area: header;
   display: grid !important; }
+  header div {
+    justify-self: center;
+    align-self: center; }
+    header div img {
+      width: 250px; }
 
-.header__logo {
-  justify-self: center;
-  align-self: center; }
-
-.header__img {
-  width: 100px; }
-
-.navbar {
+nav {
   grid-area: nav;
   font-family: "Noto Sans", sans-serif; }
+  nav div ul li {
+    margin: 0 8px 0 8px; }
 
-.nav-item {
-  margin: 0 8px 0 8px; }
-
-.footer {
+footer {
   margin-top: 10px;
   grid-area: footer;
   display: flex !important;
   flex-direction: column;
   justify-content: space-around; }
-
-.footer__content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly; }
+  footer div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
 
 /*index*/
 .paginaPrincipal {
@@ -49,34 +45,28 @@
   grid-template-areas: "header header header" "nav nav nav" "section section section" "footer footer footer";
   grid-template-rows: auto auto auto 120px;
   grid-template-columns: 120px auto auto; }
-
-.paginaPrincipal__section {
-  grid-area: section; }
-
-.carousel {
-  margin: 20px 20px 10px 20px; }
-
-.carousel-indicators li {
-  width: 10px !important;
-  height: 10px !important;
-  border-radius: 100%;
-  margin-right: 10px !important;
-  margin-left: 10px !important; }
-
-.ultimasNoticias-paginaPrincipal {
-  display: grid;
-  grid-template-rows: repeat(5, auto); }
-
-.ultimasNoticias-paginaPrincipal__container {
-  margin-top: 10px;
-  padding: 15px 10px 5px 10px;
-  border-top: 2px solid #E8E8E8;
-  display: grid;
-  grid-template-columns: 60% 30%;
-  grid-column-gap: 10%; }
-
-.ultimasNoticias-paginaPrincipal__img {
-  width: 100%; }
+  .paginaPrincipal section {
+    grid-area: section; }
+    .paginaPrincipal section div.carousel {
+      margin: 20px 20px 10px 20px; }
+      .paginaPrincipal section div.carousel ol li {
+        width: 10px !important;
+        height: 10px !important;
+        border-radius: 100%;
+        margin-right: 10px !important;
+        margin-left: 10px !important; }
+    .paginaPrincipal section div.ultimasNoticias {
+      display: grid;
+      grid-template-rows: repeat(5, auto); }
+      .paginaPrincipal section div.ultimasNoticias article {
+        margin-top: 10px;
+        padding: 15px 10px 5px 10px;
+        border-top: 2px solid #F2EAE9;
+        display: grid;
+        grid-template-columns: 60% 30%;
+        grid-column-gap: 10%; }
+        .paginaPrincipal section div.ultimasNoticias article img {
+          width: 100%; }
 
 /*celulares*/
 .paginaCelulares {
@@ -84,24 +74,20 @@
   grid-template-areas: "header header header" "nav nav nav" "section section section" "footer footer footer";
   grid-template-rows: auto auto auto 120px;
   grid-template-columns: 120px auto auto; }
-
-.paginaCelulares__section {
-  grid-area: section; }
-
-.ultimasNoticias-paginaCelulares {
-  display: grid;
-  grid-template-rows: repeat(5, auto); }
-
-.ultimasNoticias-paginaCelulares__container {
-  margin-top: 10px;
-  padding: 15px 10px 5px 10px;
-  border-top: 2px solid #E8E8E8;
-  display: grid;
-  grid-template-columns: 60% 30%;
-  grid-column-gap: 10%; }
-
-.ultimasNoticias-paginaCelulares__img {
-  width: 100%; }
+  .paginaCelulares section {
+    grid-area: section; }
+    .paginaCelulares section div.ultimasNoticias {
+      display: grid;
+      grid-template-rows: repeat(5, auto); }
+      .paginaCelulares section div.ultimasNoticias article {
+        margin-top: 10px;
+        padding: 15px 10px 5px 10px;
+        border-top: 2px solid #F2EAE9;
+        display: grid;
+        grid-template-columns: 60% 30%;
+        grid-column-gap: 10%; }
+        .paginaCelulares section div.ultimasNoticias article img {
+          width: 100%; }
 
 /*
 font-family: 'Noto Sans', sans-serif;
@@ -110,17 +96,16 @@ font-family: 'PT Serif', serif;
 font-weight: 400 400italic 700 700italic;
 */
 /*GENERAL*/
-.footer {
+footer {
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   font-size: 12px; }
-
-.footer__derechos {
-  text-align: center;
-  font-style: italic; }
+  footer span {
+    text-align: center;
+    font-style: italic; }
 
 /*index*/
-.ultimasNoticias-paginaPrincipal__title {
+span.tituloSecciones {
   font-family: "PT Serif", serif;
   font-weight: 700;
   font-style: italic;
@@ -128,13 +113,13 @@ font-weight: 400 400italic 700 700italic;
   font-size: 1.4em;
   margin: 10px 0 10px 0; }
 
-.ultimasNoticias-paginaPrincipal__title-notice {
+.ultimasNoticias article span {
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   line-height: 1.2; }
 
 /*celulares*/
-.ultimasNoticias-paginaCelulares__title {
+span.tituloSecciones {
   font-family: "PT Serif", serif;
   font-weight: 700;
   font-style: italic;
@@ -142,91 +127,96 @@ font-weight: 400 400italic 700 700italic;
   font-size: 1.4em;
   margin: 10px 0 10px 0; }
 
-.ultimasNoticias-paginaCelulares__title-notice {
+.ultimasNoticias article span {
   font-family: "Noto Sans", sans-serif;
   font-weight: 400;
   line-height: 1.2; }
 
 /*GENERAL*/
-.bg-color {
-  background-color: #000; }
+header {
+  /* background: linear-gradient(to top, #5E6A8C, #000) */ }
+
+.navbar-bgcolor {
+  /* background: linear-gradient(to bottom, #5E6A8C, #000) */
+  background-color: #5E6A8C; }
 
 .nav-link:hover {
-  background-color: #3B3B3B;
+  background-color: #9392A6;
   border-radius: 10px; }
 
-.footer {
+footer {
   background-color: #000;
   color: #fff; }
 
 @media all and (min-width: 768px) {
   /*index*/
-  .ultimasNoticias-paginaPrincipal__title {
+  .ultimasNoticias span {
     font-size: 1.8em; }
-  .ultimasNoticias-paginaPrincipal__container {
+  .ultimasNoticias article {
     margin: 10px 10vw 0 10vw;
     padding: 15px 20px 5px 20px; }
-  .ultimasNoticias-paginaPrincipal__title-notice {
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
-    line-height: 1.2;
-    line-height: 1.4;
-    word-spacing: 2px; }
+    .ultimasNoticias article span {
+      font-family: "Noto Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.2;
+      line-height: 1.4;
+      word-spacing: 2px; }
   /*celulares*/
-  .ultimasNoticias-paginaCelulares__title {
+  .ultimasNoticias span {
     font-size: 1.8em; }
-  .ultimasNoticias-paginaCelulares__container {
+  .ultimasNoticias article {
     margin: 10px 10vw 0 10vw;
     padding: 15px 20px 5px 20px; }
-  .ultimasNoticias-paginaCelulares__title-notice {
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
-    line-height: 1.2;
-    line-height: 1.4;
-    word-spacing: 2px; } }
+    .ultimasNoticias article span {
+      font-family: "Noto Sans", sans-serif;
+      font-weight: 400;
+      line-height: 1.2;
+      line-height: 1.4;
+      word-spacing: 2px; } }
 
 @media all and (min-width: 1024px) {
+  /*GENERAL*/
+  header div img {
+    width: 400px; }
   /*index*/
   .paginaPrincipal {
     grid-template-areas: "header header header" "nav nav nav" ". section ." "footer footer footer";
     grid-template-columns: auto 70em auto; }
-  .carousel {
-    margin: 40px 0 40px 0; }
-  .carousel-item img {
-    height: 75vh; }
-  .carousel-title__principal {
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
-    line-height: 1.2;
-    font-size: 3.2em; }
-  .carousel-title__secundary {
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 1.2em; }
-  .ultimasNoticias-paginaPrincipal {
-    grid-template-rows: repeat(5, auto); }
-  .ultimasNoticias-paginaPrincipal__container {
-    margin: 10px 7vw 0 7vw;
-    padding: 30px 20px 20px 20px; }
-  .ultimasNoticias-paginaPrincipal__title {
-    margin-bottom: 40px;
-    font-size: 3em; }
-  .ultimasNoticias-paginaPrincipal__title-notice {
-    font-size: 1.3em; }
+    .paginaPrincipal section div.carousel {
+      margin: 40px 0 40px 0; }
+      .paginaPrincipal section div.carousel div div.carousel-item {
+        height: 75vh; }
+        .paginaPrincipal section div.carousel div div.carousel-item div h1 {
+          font-family: "Noto Sans", sans-serif;
+          font-weight: 400;
+          line-height: 1.2;
+          font-size: 3.2em; }
+        .paginaPrincipal section div.carousel div div.carousel-item div h2 {
+          font-family: "Noto Sans", sans-serif;
+          font-weight: 400;
+          font-style: italic;
+          font-size: 1.2em; }
+    .paginaPrincipal section div.ultimasNoticias {
+      grid-template-rows: repeat(5, auto); }
+      .paginaPrincipal section div.ultimasNoticias span.titulosSecciones {
+        margin-bottom: 40px;
+        font-size: 3em; }
+      .paginaPrincipal section div.ultimasNoticias article {
+        margin: 10px 7vw 0 7vw;
+        padding: 30px 20px 20px 20px; }
+        .paginaPrincipal section div.ultimasNoticias article span {
+          font-size: 1.3em; }
   /*celulares*/
   .paginaCelulares {
     grid-template-areas: "header header header" "nav nav nav" ". section ." "footer footer footer";
     grid-template-columns: auto 70em auto; }
-  .ultimasNoticias-paginaCelulares {
-    grid-template-rows: repeat(5, auto); }
-  .paginaCelulares__section {
-    margin-top: 20px; }
-  .ultimasNoticias-paginaCelulares__container {
-    margin: 10px 7vw 0 7vw;
-    padding: 30px 20px 20px 20px; }
-  .ultimasNoticias-paginaCelulares__title {
-    margin-bottom: 40px;
-    font-size: 3em; }
-  .ultimasNoticias-paginaCelulares__title-notice {
-    font-size: 1.3em; } }
+    .paginaCelulares section div.ultimasNoticias {
+      grid-template-rows: repeat(5, auto); }
+      .paginaCelulares section div.ultimasNoticias span.titulosSecciones {
+        margin-bottom: 40px;
+        font-size: 3em; }
+      .paginaCelulares section div.ultimasNoticias article {
+        margin: 10px 7vw 0 7vw;
+        padding: 30px 20px 20px 20px; }
+        .paginaCelulares section div.ultimasNoticias article span {
+          font-size: 1.3em; } }

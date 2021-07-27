@@ -1,82 +1,104 @@
 @media all and (min-width: 768px){
 	/*index*/
-	.ultimasNoticias-paginaPrincipal__title{
-		font-size: 1.8em;
-	}
-	.ultimasNoticias-paginaPrincipal__container{
-		@include containerNoticiasDispositivosMedianos;
-	}
-	.ultimasNoticias-paginaPrincipal__title-notice{
-		@include fuenteTitulos;
-		line-height: 1.4;
-		word-spacing: 2px;
+	.ultimasNoticias{
+		span{
+			font-size: 1.8em;
+		}
+		article{
+			@include containerNoticiasDispositivosMedianos;
+			span{
+				@include fuenteTitulos;
+				line-height: 1.4;
+				word-spacing: 2px;
+			}
+		}
 	}
 
 	/*celulares*/
-	.ultimasNoticias-paginaCelulares__title{
-		font-size: 1.8em;
-	}
-	.ultimasNoticias-paginaCelulares__container{
-		@include containerNoticiasDispositivosMedianos;
-	}
-	.ultimasNoticias-paginaCelulares__title-notice{
-		@include fuenteTitulos;
-		line-height: 1.4;
-		word-spacing: 2px;
+	.ultimasNoticias{
+		span{
+			font-size: 1.8em;
+		}
+		article{
+			@include containerNoticiasDispositivosMedianos;
+			span{
+				@include fuenteTitulos;
+				line-height: 1.4;
+				word-spacing: 2px;
+			}
+		}
 	}
 }
 
 @media all and (min-width: 1024px){
+	/*GENERAL*/
+	header div img{
+		width: 400px;
+	}
+
 	/*index*/
 	.paginaPrincipal{
-		@include layoutDispositivosGrandes;
-	}
-	.carousel{
-		margin: 40px 0 40px 0;
-	}
-	.carousel-item img{
-		height: 75vh;
-	}
-	.carousel-title__principal{
-		@include fuenteTitulos;
-		font-size: 3.2em;
-	}
-	.carousel-title__secundary{
-		@include fuenteTitulosSecundarios;
-		font-size: 1.2em;
-	}
-	.ultimasNoticias-paginaPrincipal{
-		grid-template-rows: $layoutNoticias;
-	}
-	.ultimasNoticias-paginaPrincipal__container{
-		@include containerNoticiasDispositivosGrandes;
-	}
-	.ultimasNoticias-paginaPrincipal__title{
-		margin-bottom: 40px;
-		font-size: 3em;
-	}
-	.ultimasNoticias-paginaPrincipal__title-notice{
-		font-size: 1.3em;
+		grid-template-areas: 
+		"header header header"
+		"nav nav nav"
+		". section ."
+		"footer footer footer";
+		grid-template-columns: auto 70em auto;
+		section{
+			div.carousel{
+				margin: 40px 0 40px 0;
+				div div.carousel-item{
+					height: 75vh;
+					div{
+						h1{
+							@include fuenteTitulos;
+							font-size: 3.2em;
+						}
+						h2{
+							@include fuenteTitulosSecundarios;
+							font-size: 1.2em;
+						}
+					}
+				}
+			}
+			div.ultimasNoticias{
+				grid-template-rows: $layoutNoticias;
+				span.titulosSecciones{
+					margin-bottom: 40px;
+					font-size: 3em;
+				}
+				article{
+					@include containerNoticiasDispositivosGrandes;
+					span{
+						font-size: 1.3em;
+					}
+				}
+			}
+		}
 	}
 
 	/*celulares*/
 	.paginaCelulares{
-		@include layoutDispositivosGrandes;
-	}
-	.ultimasNoticias-paginaCelulares{
-		grid-template-rows: $layoutNoticias;
-	}
-	.paginaCelulares__section{
-		margin-top: 20px;
-	}
-	.ultimasNoticias-paginaCelulares__container{
-		@include containerNoticiasDispositivosGrandes;
-	}
-	.ultimasNoticias-paginaCelulares__title{
-		margin-bottom: 40px;
-		font-size: 3em;
-	}
-	.ultimasNoticias-paginaCelulares__title-notice{
-		font-size: 1.3em;
+		grid-template-areas: 
+		"header header header"
+		"nav nav nav"
+		". section ."
+		"footer footer footer";
+		grid-template-columns: auto 70em auto;
+		section{
+			div.ultimasNoticias{
+				grid-template-rows: $layoutNoticias;
+				span.titulosSecciones{
+					margin-bottom: 40px;
+					font-size: 3em;
+				}
+				article{
+					@include containerNoticiasDispositivosGrandes;
+					span{
+						font-size: 1.3em;
+					}
+				}
+			}
+		}
 	}
 }

@@ -8,29 +8,29 @@ font-weight: 400 400italic 700 700italic;
 */
 
 /*GENERAL*/
-.footer{
+footer{
 	font-family: $fuenteFooter;
 	font-weight: 400;
 	font-size: 12px;
-}
-.footer__derechos{
-	text-align: center;
-	font-style: italic;
+	span{
+		text-align: center;
+		font-style: italic;
+	}
 }
 
 /*index*/
-.ultimasNoticias-paginaPrincipal__title{
+span.tituloSecciones{
 	@include fuenteTitulosUltimasNoticias;
 }
-.ultimasNoticias-paginaPrincipal__title-notice{
+.ultimasNoticias article span{
 	@include fuenteTitulos;
 }
 
 /*celulares*/
-.ultimasNoticias-paginaCelulares__title{
+span.tituloSecciones{
 	@include fuenteTitulosUltimasNoticias;
 }
 
-.ultimasNoticias-paginaCelulares__title-notice{
+.ultimasNoticias article span{
 	@include fuenteTitulos;
 }
