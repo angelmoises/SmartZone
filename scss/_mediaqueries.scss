@@ -1,11 +1,14 @@
 @media all and (min-width: 768px){
 	/*general*/
+	a.nav-link{
+		font-size: 1.5em;
+	}
 	footer{
 		display: flex !important;
 		flex-direction: row;
 		justify-content: space-around;
 		font-size: 18px;
-		min-height: 200px;
+		min-height: 180px;
 		div.acercaDe{
 			text-align: justify;
 		}
@@ -63,6 +66,12 @@
 	/*GENERAL*/
 	header div img{
 		width: 400px;
+	}
+	a.nav-link{
+		font-size: 1em;
+	}
+	footer{
+		padding: 0 30vh 0 30vh;
 	}
 
 	/*index*/
