@@ -1,3 +1,32 @@
+@mixin layoutPaginaPrincipal{
+	display: grid;
+	grid-template-areas:
+	"header header header"
+	"nav nav nav"
+	"section section section"
+	"footer footer footer";
+	grid-template-rows: auto auto auto auto; 
+	grid-template-columns: 120px auto auto;
+}
+@mixin layoutPaginaCelulares{
+	display: grid;
+	grid-template-areas:
+	"header header header"
+	"nav nav nav"
+	"section section section"
+	"footer footer footer";
+	grid-template-rows: auto auto auto auto; 
+	grid-template-columns: 120px auto auto;
+}
+@mixin containerNoticias{
+	margin-top: 10px;
+	padding: 15px 10px 5px 10px;
+	display: grid;
+	grid-template-columns: 60% 30%;
+	grid-column-gap: 10%;
+}
+
+
 /*GENERAL*/
 header{
 	grid-area: header;
@@ -12,13 +41,12 @@ header{
 }
 nav{
 	grid-area: nav;
-	font-family: $fuenteMenu;
 	div ul li{
 		margin: 0 8px 0 8px;
 	}
 }
 footer{
-	margin-top: 10px;
+	padding: 10px 0 10px 0;
 	grid-area: footer;
 	display: flex !important;
 	flex-direction: column;
@@ -46,7 +74,7 @@ footer{
 	section{
 		grid-area: section;
 		div.carousel{
-			margin: 20px 20px 10px 20px;
+			margin: 20px 20px 0 20px;
 			ol li{
 				width: 10px !important;
 				height: 10px !important;
@@ -57,7 +85,8 @@ footer{
 		}
 		div.ultimasNoticias{
 			display: grid;
-			grid-template-rows: $layoutNoticias;
+			grid-template-rows: repeat(5, auto);
+			margin-bottom: 10px;
 			article{
 				@include containerNoticias;
 				img{
@@ -73,9 +102,25 @@ footer{
 	@include layoutPaginaCelulares;
 	section{
 		grid-area: section;
+		div.noticiaDestacada{
+			position: relative;
+			display: flex;
+			align-items: flex-end;
+			img{
+				width: 100%;
+			}
+			h2{
+				display: inline-block;
+				width: 100%;
+				padding-bottom: 20px;
+				text-align: center;
+				position: absolute;
+			}
+		}
 		div.ultimasNoticias{
 			display: grid;
-			grid-template-rows: $layoutNoticias;
+			grid-template-rows: repeat(5, auto);
+			margin-bottom: 10px;
 			article{
 				@include containerNoticias;
 				img{

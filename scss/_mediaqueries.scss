@@ -1,13 +1,22 @@
+@mixin containerNoticiasDispositivosMedianos{
+	margin: 10px 10vw 0 10vw;
+	padding: 15px 20px 5px 20px;
+}
+@mixin containerNoticiasDispositivosGrandes{
+	margin: 10px 7vw 0 7vw;
+	padding: 30px 20px 20px 20px;
+}
+
 @media all and (min-width: 768px){
 	/*general*/
 	a.nav-link{
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 	footer{
 		display: flex !important;
 		flex-direction: row;
 		justify-content: space-around;
-		font-size: 18px;
+		font-size: 1em;
 		min-height: 180px;
 		div.acercaDe{
 			text-align: justify;
@@ -20,21 +29,13 @@
 	/*index*/
 	.carousel{
 		h1{
-			@include fuenteTitulos;
-			font-size: 2.2em;
-			-webkit-text-fill-color: #fff;
-			-webkit-text-stroke: 1px #000;
-		}
-		h2{
-			@include fuenteTitulosSecundarios;
-			font-size: 1.3em;
-			-webkit-text-fill-color: #fff;
-			-webkit-text-stroke: 0.3px #000;
+			font-size: 2em;
 		}
 	}
 	.ultimasNoticias{
 		span.tituloSecciones{
-			font-size: 2.2em;
+			font-size: 2em;
+			margin: 50px 0 40px 0;
 		}
 		article{
 			@include containerNoticiasDispositivosMedianos;
@@ -47,9 +48,12 @@
 	}	
 
 	/*celulares*/
+	.noticiaDestacada h2{
+		font-size: 2em !important;
+	}
 	.ultimasNoticias{
 		span{
-			font-size: 1.8em;
+			font-size: 1.2em;
 		}
 		article{
 			@include containerNoticiasDispositivosMedianos;
@@ -68,10 +72,11 @@
 		width: 400px;
 	}
 	a.nav-link{
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 	footer{
-		padding: 0 30vh 0 30vh;
+		padding: 30px 30vh 30px 30vh;
+		min-height: 250px;
 	}
 
 	/*index*/
@@ -91,17 +96,14 @@
 						h1{
 							font-size: 3.2em;
 						}
-						h2{							
-							font-size: 1.2em;
-						}
 					}
 				}
 			}
 			div.ultimasNoticias{
-				grid-template-rows: $layoutNoticias;
-				span.titulosSecciones{
-					margin-bottom: 40px;
-					font-size: 3em;
+				grid-template-rows: repeat(5, auto);
+				span.tituloSecciones{
+					margin-bottom: 50px;
+					font-size: 2.5em;
 				}
 				article{
 					@include containerNoticiasDispositivosGrandes;
@@ -122,11 +124,14 @@
 		"footer footer footer";
 		grid-template-columns: auto 70em auto;
 		section{
+			div.noticiaDestacada h2{
+				font-size: 3.2em !important;
+			}
 			div.ultimasNoticias{
-				grid-template-rows: $layoutNoticias;
-				span.titulosSecciones{
-					margin-bottom: 40px;
-					font-size: 3em;
+				grid-template-rows: repeat(5, auto);
+				span.tituloSecciones{
+					margin-bottom: 50px;
+					font-size: 2.5em;
 				}
 				article{
 					@include containerNoticiasDispositivosGrandes;

@@ -1,3 +1,10 @@
+$header: #0468BF;
+$bgmenu: #262626;
+$bgmenuhover: #3D3837;
+$bgfooter: #BFBFBF;
+$fuentefooter-color: #404040;
+$separadoresnoticias: 2px solid #BFBFBF;
+
 /*GENERAL*/
 header{
 	background-color: $header;
@@ -12,4 +19,9 @@ header{
 footer{
 	background-color: $bgfooter;
 	color: $fuentefooter-color;
+}
+
+
+div.ultimasNoticias article{
+	border-top: $separadoresnoticias;
 }
