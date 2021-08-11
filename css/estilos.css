@@ -124,7 +124,7 @@ footer {
         margin-left: 10px !important; }
     .paginaPrincipal section div.ultimasNoticias {
       display: grid;
-      grid-template-rows: repeat(5, auto);
+      grid-template-rows: repeat(3, auto);
       margin-bottom: 10px; }
       .paginaPrincipal section div.ultimasNoticias article {
         margin-top: 10px;

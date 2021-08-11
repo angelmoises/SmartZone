@@ -85,7 +85,7 @@ footer{
 		}
 		div.ultimasNoticias{
 			display: grid;
-			grid-template-rows: repeat(5, auto);
+			grid-template-rows: repeat(3, auto);
 			margin-bottom: 10px;
 			article{
 				@include containerNoticias;
